@@ -1,0 +1,36 @@
+{
+    "swagger":"2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "FactCheck",
+        "description": "",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licneses/MIT"
+        }
+    },
+    "definitions": {
+        "id":{
+            "properties": {
+                "uuid":{
+                    "type":"string"
+                }
+            }
+        },
+        "user":{
+            "email": {
+                "type": "String"
+            }, "phone": {
+                "type": "Number"
+            }, "image": {
+                "type": "String"
+            }, "username": {
+                "type": "String"   
+            },"password": {
+                "type": "String"
+            },"role": {
+                "type": "String"
+            }
+        } 
+    }
+}
