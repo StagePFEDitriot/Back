@@ -6,7 +6,7 @@ const fs = require("fs")
 const path = require('path');
 //c bon 
 const index = (req, res, next) => {
-    panier.find().populate('user').populate('produit')
+    panier.find()
         .then(response => {
             res.json({
                 response

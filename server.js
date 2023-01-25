@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const morgan = require("morgan")
 const path = require('path');
 const cron = require('node-cron')
-const puppeteer = require('puppeteer')
 const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerDocument = require("./swagger.json")
 const swaggerUi = require("swagger-ui-express");

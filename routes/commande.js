@@ -7,7 +7,7 @@ router.get('/',commandeController.index)
 router.post('/store',commandeController.store)
 //router.put('/update',commandeController.update)//,upload.single('idPhoto'),
 //router.get('/showID',commandeController.showID)
-//router.delete('/delete',commandeController.destory)
+router.delete('/delete',commandeController.destory)
 //router.get('/confirmation/:token', produitController.confirm);
 //router.post('/register',produitController.adds)//,upload.single('idPhoto'),
 module.exports=router

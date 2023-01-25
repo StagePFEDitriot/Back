@@ -13,10 +13,11 @@ const path = require('path')
 //c bon 
 const index = (req, res, next) => {
     user.find()
-        .then(response => {
-            res.json({
-                response
-            })
+        .then(users => {
+            res.header('Access-Control-Allow-Origin', '*');
+            res.json(
+                users
+            )
         })
         .catch(error => {
             res.json({

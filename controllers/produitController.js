@@ -7,10 +7,12 @@ const path = require('path');
 //c bon 
 const index = (req, res, next) => {
     produit.find()
+
         .then(response => {
-            res.json({
+            res.header('Access-Control-Allow-Origin', '*');
+            res.json(
                 response
-            })
+            )
         })
         .catch(error => {
             res.json({
