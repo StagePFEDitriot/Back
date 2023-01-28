@@ -91,7 +91,7 @@ const destory = (req, res, next) => {
             })
         })
 }
-update = async (req, res, next)=>
+const update = async (req, res, next)=>
 {
     let livreurID=req.body.livreurID
     let existingLivreur={

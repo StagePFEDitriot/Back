@@ -92,7 +92,7 @@ const destory = (req, res, next) => {
             })
         })
 }
-update = async (req, res, next)=>
+const update = async (req, res, next)=>
 {
     let produitID=req.body.produitID
     let existingProduit={

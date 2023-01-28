@@ -7,7 +7,7 @@ const fs = require("fs")
 const path = require('path');
 //c bon 
 const index = (req, res, next) => {
-    commande.find()//.populate('user').populate('produit')
+    commande.find().populate('user').populate('produit')
         .then(response => {
             res.json({
                 response
@@ -21,11 +21,11 @@ const index = (req, res, next) => {
 }
 // c bon
 const show = (req, res) => {
-    let username = req.body.username
-    livreur.findOne({ username })
-        .then(existingLivreur => {
+    let user = req.body.userID
+    commande.find({ user })
+        .then(existingCommande => {
             res.json(
-                { existingLivreur }
+                { existingCommande }
             )
         })
         .catch(error => {
@@ -120,7 +120,7 @@ const destory = (req, res, next) => {
             })
         })
 }
-update = async (req, res, next) => {
+const update = async (req, res, next) => {
     let livreurID = req.body.livreurID
     let existingLivreur = {
         email: req.body.email,
@@ -146,7 +146,6 @@ update = async (req, res, next) => {
 module.exports = {
     index,
     store,
-    destory
-
-
+    destory,
+    show,
 }
