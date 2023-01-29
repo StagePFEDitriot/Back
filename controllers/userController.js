@@ -173,13 +173,28 @@ const confirm = async (req, res, next) => {
 
 
 };
-
+const destory = (req, res, next) => {
+    let userID = req.body.userID
+    user.findByIdAndRemove(userID)
+        .then(() => {
+            res.json({
+                message: 'User delete successfully'
+            })
+        })
+        .catch(error => {
+            res.json({
+                message: 'an error Occured!',
+                error
+            })
+        })
+}
 module.exports = {
     index,
     show,
     update,
     showID,
     adds,
-    confirm
+    confirm,
+    destory
 
 }

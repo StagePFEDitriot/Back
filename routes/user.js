@@ -8,7 +8,7 @@ router.get('/show',userController.show)
 //router.post('/store',userController.store)
 router.put('/update',userController.update)//,upload.single('idPhoto'),
 router.post('/showID',userController.showID)
-//router.post('/delete',userController.destory)
+router.delete('/delete',userController.destory)
 router.get('/confirmation/:token', userController.confirm);
 router.post('/register',userController.adds)//,upload.single('idPhoto'),
 module.exports=router

@@ -8,6 +8,7 @@ router.get('/show',panierController.show)
 router.put('/update',panierController.update)//,upload.single('idPhoto'),
 router.get('/showID',panierController.showID)
 router.delete('/delete',panierController.destory)
+router.delete('/deletePanier',panierController.deletePanier)
 //router.get('/confirmation/:token', panierController.confirm);
 //router.post('/register',panierController.adds)//,upload.single('idPhoto'),
 module.exports=router

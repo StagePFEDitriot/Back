@@ -88,12 +88,27 @@ const update = async (req, res, next)=>
 }
     
 }
-
+const deletePanier = (req, res, next) => {
+    let panierID = req.body.panierID
+    panier.findByIdAndRemove(panierID)
+        .then(() => {
+            res.json({
+                message: 'Panier delete successfully'
+            })
+        })
+        .catch(error => {
+            res.json({
+                message: 'an error Occured!',
+                error
+            })
+        })
+}
 module.exports = {
     index,
     show,
     showID,
     destory,
-    update
+    update,
+    deletePanier
 
 }

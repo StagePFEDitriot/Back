@@ -116,33 +116,7 @@ const update = async (req, res, next)=>
 }
     
 }
-/*const update =(req, res, next)=>
-{
-    let produitID=req.body.produitID
-    let existingProduit={
-        name: req.body.name,
-        size: req.body.size,
-        type: req.body.type,
-        prise: req.body.prise,
-        description: req.body.description,
-        statusStock: req.body.statusStock,
-        color:req.body.color,
-        confirmed:req.body.confirmed,
-        //idPhoto:req.file.path,
-    }
-    produit.findByIdAndUpdate(produitID, {$set:existingProduit})
-    .then(()=>{
-       produit.findOne({produitID}).then((exproduit)=>{
-           res.json({exproduit})
-       })
-    })
-.catch(error =>{
-    res.status(400).json({
-        message:'an error Occured!',
-        error
-    })
-})
-}*/
+
 
 module.exports = {
     index,
