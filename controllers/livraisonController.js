@@ -7,11 +7,12 @@ const fs = require("fs")
 const path = require('path');
 //c bon 
 const index = (req, res, next) => {
-    livraison.find().populate('user').populate('commande').populate('livreur')
+    livraison.find()//.populate('user').populate('commande').populate('livreur')
         .then(response => {
-            res.json({
+            res.header('Access-Control-Allow-Origin', '*');
+            res.json(
                 response
-            })
+            )
         })
         .catch(error => {
             res.json({

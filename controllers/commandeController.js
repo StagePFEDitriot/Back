@@ -9,9 +9,10 @@ const path = require('path');
 const index = (req, res, next) => {
     commande.find().populate('user').populate('produit')
         .then(response => {
-            res.json({
+            res.header('Access-Control-Allow-Origin', '*');
+            res.json(
                 response
-            })
+            )
         })
         .catch(error => {
             res.json({

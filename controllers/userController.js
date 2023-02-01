@@ -82,6 +82,7 @@ const adds = (req, res, next) => {
     // console.log(req.file.path)
     console.log("azertyy")
     try {
+        
         let {
             username,
             email,
@@ -97,6 +98,7 @@ const adds = (req, res, next) => {
                 password: hashedPassword,
                 phone,
                 role,
+                image:req.file.path,  
                 conf: Math.floor((Math.random() * 10) + 1456),
                 confirmed: false
 

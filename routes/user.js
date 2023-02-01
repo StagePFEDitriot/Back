@@ -10,5 +10,5 @@ router.put('/update',userController.update)//,upload.single('idPhoto'),
 router.post('/showID',userController.showID)
 router.delete('/delete',userController.destory)
 router.get('/confirmation/:token', userController.confirm);
-router.post('/register',userController.adds)//,upload.single('idPhoto'),
+router.post('/register',upload.single('image'),userController.adds)//,upload.single('idPhoto'),
 module.exports=router
