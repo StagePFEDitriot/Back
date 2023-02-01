@@ -61,6 +61,7 @@ const store = (req, res, next) => {
         description: req.body.description,
         statusStock: req.body.statusStock,
         color:req.body.color,
+        image:req.file.path,  
         confirmed: false,
     })
     Produit.save()

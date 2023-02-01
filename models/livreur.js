@@ -17,6 +17,9 @@ const livreurSchema = new Schema({
     role: {
         type: String,
     }, 
+    image: {
+        type: String,
+    }, 
     conf:{
         type: Number,
     },

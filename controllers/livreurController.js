@@ -42,7 +42,7 @@ const store = (req, res, next) => {
         email: req.body.email,
         phone: req.body.phone,
         username: req.body.username,
-        //image: req.body.image,
+        image: req.file.path,  
         password: req.body.password,
         role: req.body.role,
        // conf:req.body.conf,

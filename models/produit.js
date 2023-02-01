@@ -20,6 +20,9 @@ const produitSchema = new Schema({
     statusStock:{
         type: String,
     },
+    image: {
+        type: String,
+    }, 
     color:{
         type:String,
     },
